@@ -1,7 +1,18 @@
-dlib==19.24.4
+# Use PiWheels and binaries only (avoids compiling on Pi)
+--extra-index-url https://www.piwheels.org/simple
+--only-binary :all:
+
+# Critical pins
 numpy==1.26.4
+
+# Choose ONE of these (uncomment the one you want):
+opencv-python<4.12
+# opencv-python-headless<4.12
+
+# The rest of your stack
+scipy
 scikit-image==0.22.0
 pandas==2.2.2
-opencv-python==4.10.0.84
 flask
-pillow
+pillow==11.3.0
+dlib==19.24.4
