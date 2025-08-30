@@ -11,7 +11,6 @@ opencv-python<4.12
 
 # The rest of your stack
 scipy
-scikit-image==0.22.0
 pandas==2.2.2
 flask
 pillow==11.3.0
