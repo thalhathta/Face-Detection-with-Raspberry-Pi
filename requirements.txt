@@ -1,17 +1,11 @@
-# Use PiWheels and binaries only (avoids compiling on Pi)
---extra-index-url https://www.piwheels.org/simple
---only-binary :all:
-
-# Critical pins
+# Use PiWheels & binaries only
 numpy==1.26.4
-
-# Choose ONE of these (uncomment the one you want):
 opencv-python<4.12
-# opencv-python-headless<4.12
-
-# The rest of your stack
 scipy
 pandas==2.2.2
 flask
 pillow==11.3.0
-dlib==19.24.4
+
+# dlib (choose wheel per architecture)
+dlib-bin==19.24.6; platform_machine == "aarch64"
+dlib==20.0.0; platform_machine != "aarch64"
